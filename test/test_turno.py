@@ -1,9 +1,9 @@
 import unittest
 from datetime import datetime
 
-from turno import Turno
-from paciente import Paciente
-from medico import Medico
+from src.models.turno import Turno
+from src.models.paciente import Paciente
+from src.models.medico import Medico
 
 class TestTurno(unittest.TestCase):
     def setUp(self):

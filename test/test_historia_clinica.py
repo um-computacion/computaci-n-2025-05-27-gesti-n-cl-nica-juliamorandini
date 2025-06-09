@@ -1,11 +1,11 @@
 import unittest
 from datetime import datetime
 
-from historia_clinica import HistoriaClinica
-from paciente import Paciente
-from medico import Medico
-from turno import Turno
-from receta import Receta
+from src.models.historia_clinica import HistoriaClinica
+from src.models.paciente import Paciente
+from src.models.medico import Medico
+from src.models.turno import Turno
+from src.models.receta import Receta
 
 class TestHistoriaClinica(unittest.TestCase):
     def setUp(self):

@@ -1,9 +1,9 @@
 import unittest
 from datetime import datetime
 
-from receta import Receta
-from paciente import Paciente
-from medico import Medico
+from src.models.receta import Receta
+from src.models.paciente import Paciente
+from src.models.medico import Medico
 
 class TestReceta(unittest.TestCase):
     def setUp(self):
@@ -16,7 +16,7 @@ class TestReceta(unittest.TestCase):
         self.assertIn("Ibuprofeno", str(receta))
         self.assertIn("Juan Perez", str(receta))
         self.assertIn("Dra. House", str(receta))
-        self.assertIsInstance(receta._Receta__fecha__, datetime)
+        self.assertIsInstance(receta.obtener_fecha(), datetime)
 
     def test_str(self):
         receta = Receta(self.paciente, self.medico, ["Amoxicilina"])

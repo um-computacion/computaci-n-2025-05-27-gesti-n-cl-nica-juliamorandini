@@ -1,7 +1,7 @@
 import unittest
 
-from medico import Medico
-from especialidad import Especialidad
+from src.models.medico import Medico
+from src.models.especialidad import Especialidad
 
 class TestMedico(unittest.TestCase):
     def test_creacion_exitosa(self):

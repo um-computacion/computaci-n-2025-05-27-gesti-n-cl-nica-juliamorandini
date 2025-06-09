@@ -1,6 +1,6 @@
 import unittest
 
-from especialidad import Especialidad
+from src.models.especialidad import Especialidad
 
 class TestEspecialidad(unittest.TestCase):
     def test_creacion_exitosa(self):

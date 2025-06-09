@@ -1,11 +1,11 @@
 import unittest
 from datetime import datetime
 
-from clinica import Clinica
-from paciente import Paciente
-from medico import Medico
-from especialidad import Especialidad
-from excepciones import (
+from src.models.clinica import Clinica
+from src.models.paciente import Paciente
+from src.models.medico import Medico
+from src.models.especialidad import Especialidad
+from src.excepciones import (
     PacienteNoEncontradoException,
     MedicoNoDisponibleException,
     TurnoOcupadoException,

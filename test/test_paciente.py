@@ -1,7 +1,7 @@
 import unittest
 
-# Suponiendo que la clase Paciente está en el módulo paciente.py
-from paciente import Paciente
+
+from src.models.paciente import Paciente
 
 class TestPaciente(unittest.TestCase):
     def test_creacion_exitosa(self):
