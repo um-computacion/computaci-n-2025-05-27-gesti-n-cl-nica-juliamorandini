@@ -19,8 +19,8 @@ class RecetaInvalidaException(Exception):
 
 class Clinica:
     def __init__(self, pacientes: dict[str, Paciente], medicos: dict[str, Medico], turnos: list[Turno], histroria_clinica: dict[str, Historia_clinica]):
-        self.pacientes = pacientes
-        self.medicos = medicos
-        self.turnos = turnos
-        self.histroria_clinica = histroria_clinica
-        #perdon por tantos commits :)
+        self.__pacientes = pacientes
+        self.__medicos = medicos
+        self.__turnos = turnos
+        self.__histroria_clinica = histroria_clinica
+        

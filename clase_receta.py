@@ -2,11 +2,12 @@ from clase_paciente import Paciente
 from clase_medico import Medico
 from datetime import datetime
 class Receta :
-    def __init__ (self, paciente: Paciente, medico: Medico, medicamentos: list[str], fecha: datetime)
+    def __init__ (self, paciente: Paciente, medico: Medico, medicamentos: list[str], fecha: datetime):
         self.paciente = paciente
         self.medico = medico
         self.medicamentos = medicamentos
         self.fecha = fecha
+    
     
     def __str__(self):
         medicamentos_str = "[" + ", ".join(self.__medicamentos) + "]"

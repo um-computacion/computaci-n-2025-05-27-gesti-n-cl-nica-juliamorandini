@@ -3,18 +3,18 @@ from clase_receta import Receta
 from clase_turno import Turno
 class Historia_clinica:
     def __init__(self, paciente: Paciente, turnos: list[Turno], recetas: list[Receta]):
-        self.paciente = paciente
-        self.turnos = turnos
-        self.recetas = recetas
+        self.__paciente = paciente
+        self.__turnos = turnos
+        self.__recetas = recetas
 
     def agregar_turnos(self, turnos: Turno):
-        self.turnos.append(turnos)
+        self.__turnos.append(turnos)
 
     def obtener_turnos(self):
-        return list(self.turnos)
+        return list(self.__turnos)
     
     def obtener_recetas(self):
-        return list(self.recetas) #me dice que no detecta el self?
+        return list(self.__recetas) #me dice que no detecta el self?
     
     def __str__(self):
         turnos_str = "\n    ".join(str(t) for t in self.__turnos)
