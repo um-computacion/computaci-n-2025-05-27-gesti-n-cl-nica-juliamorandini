@@ -2,7 +2,9 @@
 # 🏥 Sistema de Gestión para una Clínica
 
 ## 👤 Información del Alumno
-
+### Nota al profesor:
+Hola profe buenos dias, tuve muchos problemas con este proyecto y habia un momento en el que era mejor simplemente comnezar de nuevo por lo que a partir del commit 20 empieza el proyecto 2.0
+Gracias
 ### 📋 Datos Personales
 - **Nombre y Apellido**: Julia Morandini
 - **Ciclo Lectivo**: 2025
