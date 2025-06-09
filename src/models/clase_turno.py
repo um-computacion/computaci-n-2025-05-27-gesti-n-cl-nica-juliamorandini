@@ -15,9 +15,5 @@ class Turno:
     def obtener_fecha_hora(self) -> datetime:
         return self.__fecha_hora
     
-def __str__(self) -> str:
-        return (f"Turno:\n"
-                f"  Paciente: {self.__paciente}\n"
-                f"  Médico: {self.__medico}\n"
-                f"  Especialidad: {self.__especialidad}\n"
-                f"  Fecha y hora: {self.__fecha_hora.strftime('%d/%m/%Y %H:%M')}")
+    def __str__(self):
+        return f"Turno:\n  Paciente: {self.__paciente}\n  Médico: {self.__medico}\n  Especialidad: {self.__especialidad}\n  Fecha y hora: {self.__fecha_hora}"
