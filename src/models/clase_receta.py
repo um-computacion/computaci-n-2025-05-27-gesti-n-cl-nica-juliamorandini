@@ -1,5 +1,5 @@
-from clase_paciente import Paciente
-from clase_medico import Medico
+from src.models.clase_paciente import Paciente
+from src.models.clase_medico import Medico
 from datetime import datetime
 class Receta :
     def __init__ (self, paciente: Paciente, medico: Medico, medicamentos: list[str], fecha: datetime):
@@ -8,7 +8,7 @@ class Receta :
         self.medicamentos = medicamentos
         self.fecha = fecha
     
-    
+
     def __str__(self):
         medicamentos_str = "[" + ", ".join(self.__medicamentos) + "]"
         paciente_str = str(self.__paciente)

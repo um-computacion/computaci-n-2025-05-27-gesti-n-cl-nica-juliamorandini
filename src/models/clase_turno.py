@@ -1,5 +1,5 @@
-from clase_paciente import Paciente
-from clase_medico import Medico
+from src.models.clase_paciente import Paciente
+from src.models.clase_medico import Medico
 import datetime
 class Turno:
     def __init__(self, paciente: Paciente, medico: Medico, fecha_hora: datetime, especialidad: str):

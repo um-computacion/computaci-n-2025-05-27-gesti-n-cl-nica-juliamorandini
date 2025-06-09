@@ -10,5 +10,4 @@ class Paciente:
     def __str__(self) -> str:
         return f"{self.__nombre}, {self.__dni}, {self.__fecha_nacimiento}" #sigo aprendiendo a usar este tipo de formato 
     
-
     #sin setter xq la consigna no pide que se modifique el nombre
