@@ -1,14 +1,14 @@
 class Paciente:
     def __init__(self, nombre: str, dni: str, fecha_nacimiento: str): #constructor
-        self.nombre = nombre
-        self.dni = dni
-        self.fecha_nacimiento = fecha_nacimiento
+        self.__nombre = nombre
+        self.__dni = dni
+        self.__fecha_nacimiento = fecha_nacimiento
 
     def obtener_dni(self) -> str: #getter
-        return self.dni
+        return self.__dni
     
     def __str__(self) -> str:
-        return f"{self.nombre}, {self.dni}, {self.fecha_nacimiento}" #sigo aprendiendo a usar este tipo de formato 
+        return f"{self.__nombre}, {self.__dni}, {self.__fecha_nacimiento}" #sigo aprendiendo a usar este tipo de formato 
     
 
-    #sin setter xq la consigna no pide que se modifique el nombre 
+    #sin setter xq la consigna no pide que se modifique el nombre
