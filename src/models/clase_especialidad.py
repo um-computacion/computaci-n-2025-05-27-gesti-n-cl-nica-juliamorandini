@@ -1,7 +1,7 @@
 class Especialidad:
-    def __init__(self, tipo: str, dias: list[str]): #contructor
+    def __init__(self, tipo: str = None, dias: list = None):
         self.__tipo = tipo
-        self.__dias = dias  
+        self.__dias = dias if dias is not None else []
 
     def obtener_especialidad(self) -> str:
         return self.__tipo

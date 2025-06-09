@@ -2,10 +2,10 @@ from src.models.clase_paciente import Paciente
 from src.models.clase_receta import Receta
 from src.models.clase_turno import Turno
 class Historia_clinica:
-    def __init__(self, paciente: Paciente, turnos: list[Turno], recetas: list[Receta]):
+    def __init__(self, paciente = None, turnos: list = None, recetas: list = None):
         self.__paciente = paciente
-        self.__turnos = turnos
-        self.__recetas = recetas
+        self.__turnos = turnos if turnos is not None else []
+        self.__recetas = recetas if recetas is not None else []
 
     def agregar_turnos(self, turnos: Turno):
         self.__turnos.append(turnos)

@@ -1,13 +1,13 @@
 from src.models.clase_paciente import Paciente
 from src.models.clase_medico import Medico
 from datetime import datetime
-class Receta :
-    def __init__ (self, paciente: Paciente, medico: Medico, medicamentos: list[str], fecha: datetime):
-        self.paciente = paciente
-        self.medico = medico
-        self.medicamentos = medicamentos
-        self.fecha = fecha
-    
+
+class Receta:
+    def __init__(self, paciente = None, medico = None, medicamentos: list = None, fecha: datetime = None):
+        self.__paciente = paciente
+        self.__medico = medico
+        self.__medicamentos = medicamentos if medicamentos is not None else []
+        self.__fecha = fecha
 
     def __str__(self):
         medicamentos_str = "[" + ", ".join(self.__medicamentos) + "]"

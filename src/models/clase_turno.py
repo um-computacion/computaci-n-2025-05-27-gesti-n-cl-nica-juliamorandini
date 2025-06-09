@@ -1,12 +1,13 @@
 from src.models.clase_paciente import Paciente
 from src.models.clase_medico import Medico
 import datetime
+
 class Turno:
-    def __init__(self, paciente: Paciente, medico: Medico, fecha_hora: datetime, especialidad: str):
-        self.paciente = paciente
-        self.medico = medico
-        self.fecha_hora = fecha_hora
-        self.especialidad = especialidad
+    def __init__(self, paciente = None, medico = None, fecha_hora: datetime.datetime = None, especialidad: str = None):
+        self.__paciente = paciente
+        self.__medico = medico
+        self.__fecha_hora = fecha_hora
+        self.__especialidad = especialidad
 
     def obtener_medico(self) -> Medico:
         return self.__medico
