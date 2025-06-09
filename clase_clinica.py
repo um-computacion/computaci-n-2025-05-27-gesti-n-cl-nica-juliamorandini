@@ -3,19 +3,9 @@ from clase_medico import Medico
 from clase_turno import Turno
 from clase_receta import Receta
 from clase_historia_clinica import Historia_clinica
+from excepciones import (PacienteNoEncontradoException, MedicoNoDisponibleException, TurnoOcupadoException, RecetaInvalidaException)
 
 from datetime import datetime
-class PacienteNoEncontradoException(Exception):
-    pass
-
-class MedicoNoDisponibleException(Exception):
-    pass
-
-class TurnoOcupadoException(Exception):
-    pass
-
-class RecetaInvalidaException(Exception):
-    pass
 
 class Clinica:
     def __init__(self, pacientes: dict[str, Paciente], medicos: dict[str, Medico], turnos: list[Turno], historias_clinica: dict[str, Historia_clinica]):
@@ -29,14 +19,14 @@ class Clinica:
     def agregar_paciente(self, paciente: Paciente):
         dni = paciente.obtener_dni()
         if dni in self.__pacientes:
-            raise ValueError(f"El paciente con DNI {dni} ya está registrado.")
+            raise ValueError(f"El paciente con DNI {dni} ya esta registrado")
         self.__pacientes[dni] = paciente
         self.__historias_clinica[dni] = Historia_clinica(paciente, [], [])
 
     def agregar_medico(self, medico: Medico):
         matricula = medico.obtener_matricula()
         if matricula in self.__medicos:
-            raise ValueError(f"El médico con matrícula {matricula} ya está registrado.")
+            raise ValueError(f"El medico con matrícula {matricula} ya esta registrado")
         self.__medicos[matricula] = medico
 
 
@@ -61,19 +51,19 @@ class Clinica:
 
     def agendar_turno(self, dni: str, matricula: str, especialidad: str, fecha_hora: datetime):
         if not self.validar_existencia_paciente(dni):
-            raise PacienteNoEncontradoException("Paciente no registrado.")
+            raise PacienteNoEncontradoException("Paciente no registrado")
         if not self.validar_existencia_medico(matricula):
-            raise MedicoNoDisponibleException("Médico no registrado.")
+            raise MedicoNoDisponibleException("medico no registrado")
 
         medico = self.__medicos[matricula]
         paciente = self.__pacientes[dni]
         dia_semana = self.obtener_dia_semana_en_espanol(fecha_hora)
 
         if not self.validar_turno_no_duplicado(matricula, fecha_hora):
-            raise TurnoOcupadoException("El médico ya tiene un turno en ese horario.")
+            raise TurnoOcupadoException("El medico ya tiene un turno en ese horario")
 
         if not self.validar_especialidad_en_dia(medico, especialidad, dia_semana):
-            raise MedicoNoDisponibleException("El médico no atiende esa especialidad ese día.")
+            raise MedicoNoDisponibleException("el medico no atiende esa especialidad ese dia")
 
         turno = Turno(paciente, medico, fecha_hora, especialidad)
         self.__turnos.append(turno)
