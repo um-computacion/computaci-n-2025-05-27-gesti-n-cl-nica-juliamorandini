@@ -1,11 +1,14 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/y_fEcNZn)
 # 🏥 Sistema de Gestión para una Clínica
 
 ## 👤 Información del Alumno
-
+### Nota al profesor:
+Hola profe buenos dias, tuve muchos problemas con este proyecto y habia un momento en el que era mejor simplemente comnezar de nuevo por lo que a partir del commit 20 empieza el proyecto 2.0
+Gracias
 ### 📋 Datos Personales
-- **Nombre y Apellido**: [Completar con nombre y apellido]
+- **Nombre y Apellido**: Julia Morandini
 - **Ciclo Lectivo**: 2025
-- **Carrera**: [Completar con nombre de la carrera]
+- **Carrera**: Ingenieria en Informatica
 
 ## ⏰ Información Importante sobre la Entrega
 
