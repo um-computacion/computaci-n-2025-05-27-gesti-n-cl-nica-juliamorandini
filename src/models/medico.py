@@ -9,7 +9,6 @@ class Medico:
         self.__especialidades__ = []
 
     def agregar_especialidad(self, especialidad):
-        # No permitir duplicados por nombre de especialidad
         for esp in self.__especialidades__:
             if esp.obtener_especialidad().lower() == especialidad.obtener_especialidad().lower():
                 raise ValueError("Especialidad duplicada para este médico.")

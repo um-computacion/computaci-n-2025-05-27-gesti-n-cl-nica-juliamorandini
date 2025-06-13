@@ -10,10 +10,10 @@ from src.models.turno import Turno
 
 class Clinica:
     def __init__(self):
-        self.__pacientes__ = {}  # dni: Paciente
-        self.__medicos__ = {}    # matricula: Medico
-        self.__turnos__ = []     # list of Turno
-        self.__historias_clinicas__ = {}  # dni: HistoriaClinica
+        self.__pacientes__ = {}
+        self.__medicos__ = {}
+        self.__turnos__ = []
+        self.__historias_clinicas__ = {}
 
     def agregar_paciente(self, paciente):
         dni = paciente.obtener_dni()
@@ -68,7 +68,6 @@ class Clinica:
         self.validar_existencia_paciente(dni)
         return self.__historias_clinicas__[dni]
 
-    # --- Validaciones y utilidades ---
     def validar_existencia_paciente(self, dni):
         if dni not in self.__pacientes__:
             raise PacienteNoEncontradoException("Paciente no encontrado.")

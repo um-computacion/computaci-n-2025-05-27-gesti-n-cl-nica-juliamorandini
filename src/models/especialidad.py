@@ -8,16 +8,13 @@ class Especialidad:
             raise ValueError("El tipo de especialidad no puede estar vacío.")
         if not dias or not isinstance(dias, list):
             raise ValueError("La lista de días no puede estar vacía.")
-        # Normalizar y validar días
         dias_normalizados = []
         for dia in dias:
             if not isinstance(dia, str):
                 raise ValueError("Día inválido.")
             dia_lower = dia.lower()
-            # Permitir tanto "miércoles" como "miercoles", "sábado" como "sabado"
             if dia_lower not in self.DIAS_VALIDOS:
                 raise ValueError(f"Día inválido: {dia}")
-            # Normalizar a "miércoles" y "sábado"
             if dia_lower == "miercoles":
                 dia_lower = "miércoles"
             if dia_lower == "sabado":
